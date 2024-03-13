@@ -2,7 +2,10 @@
   "name": "my-turborepo",
   "private": true,
   "scripts": {
-    "build": "turbo build",
+    "build": "turbo run build --filter=... --parallel",
+    "start": "turbo run start --parallel",
+    "start:auth": "turbo run start --filter=auth-service",
+    "start:user": "turbo run start --filter=user-service",
     "dev": "turbo dev",
     "lint": "turbo lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\""
